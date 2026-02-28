@@ -144,8 +144,14 @@ h3 { margin: 0 0 10px 0; }
 
 .small { color: var(--muted); font-size: 14px; }
 
+
 .pubs {
-  padding-left: 18px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.pubs li {
+  margin: 0 0 14px 0;
 }
 
 .contact-grid {
@@ -175,3 +181,4 @@ h3 { margin: 0 0 10px 0; }
   .contact-grid { grid-template-columns: 1fr; }
   h1 { font-size: 36px; }
 }
+
