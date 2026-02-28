@@ -1,45 +1,153 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Sam Hirst</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sam Hirst</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- Top nav -->
+    <header class="site-header">
+      <div class="container nav-row">
+        <a class="brand" href="#home">Sam Hirst</a>
 
-<header>
-  <h1>Sam Hirst</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#cv">CV</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-<section id="about">
-  <h2>About</h2>
-  <img src="images/headshot.jpg" width="200">
-  <p>Short professional bio here.</p>
-</section>
+    <!-- Hero -->
+    <main id="home" class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Sam Hirst</h1>
+          <p class="lead">
+            Postdoctoral researcher • Pangenomes & structural variation • Venom evolution
+          </p>
+          <p class="meta">
+            Columbia University • New York, NY
+          </p>
 
-<section id="research">
-  <h2>Research</h2>
-  <p>Description of your work.</p>
-</section>
+          <div class="links">
+            <a class="button" href="#contact">Contact</a>
+            <a class="button ghost" href="cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
+          </div>
+        </div>
 
-<section id="publications">
-  <h2>Publications</h2>
-  <ul>
-    <li>Evolution (2025) – Island Biogeography & Venom Complexity</li>
-  </ul>
-</section>
+        <div class="hero-image">
+          <img src="images/headshot.jpg" alt="Headshot of Sam Hirst" />
+        </div>
+      </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: you@email.com</p>
-</section>
+      <!-- About -->
+      <section id="about" class="section">
+        <h2>About</h2>
+        <div class="split">
+          <div>
+            <h3>Evolutionary genomics + trait evolution</h3>
+            <p>
+              Short paragraph about your trajectory (PhD → postdoc), what you study, and what you’re
+              excited about. Keep it scannable.
+            </p>
+            <p>
+              Mention your strengths: long-read assemblies, pangenomes, SVs, population genomics,
+              and trait/venom phenotypes.
+            </p>
+          </div>
+          <div class="callout">
+            <p><strong>Interests</strong></p>
+            <ul>
+              <li>HiFi genomes & pangenome graphs</li>
+              <li>Structural variation and adaptation</li>
+              <li>Venom evolution & island biogeography</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <!-- Research -->
+      <section id="research" class="section">
+        <h2>Research</h2>
+
+        <article class="card">
+          <img src="images/research1.jpg" alt="Example figure or photo" />
+          <div>
+            <h3>Pangenomes & structural variation</h3>
+            <p>
+              3–5 sentences. What’s the question, what data, what methods (HiFi, assemblies, graph
+              pangenomes, SV calling), and why it matters.
+            </p>
+            <p class="small">
+              Tools: hifiasm, minimap2/wfmash, pggb/odgi, Sniffles/CuteSV, etc.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/research2.jpg" alt="Example figure or photo" />
+          <div>
+            <h3>Venom evolution on islands</h3>
+            <p>
+              3–5 sentences. Island biogeography framing, ecological drivers, multi-omics angle.
+            </p>
+            <p class="small">
+              Data: WGS/ddRAD/seq-capture, transcriptomics, HPLC, functional assays.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="section">
+        <h2>Publications</h2>
+        <ul class="pubs">
+          <li>
+            <strong>Hirst</strong> et al. (2025) <em>Evolution</em> — Island biogeography and venom complexity.
+            <a href="#" target="_blank" rel="noreferrer">DOI</a>
+          </li>
+          <li>
+            Add a few more; keep “Selected” and link out to Google Scholar.
+          </li>
+        </ul>
+        <p class="small">
+          Full list on <a href="#" target="_blank" rel="noreferrer">Google Scholar</a>.
+        </p>
+      </section>
+
+      <!-- CV -->
+      <section id="cv" class="section">
+        <h2>CV</h2>
+        <p>
+          <a class="button" href="cv.pdf" target="_blank" rel="noreferrer">Open CV (PDF)</a>
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-item"><strong>Email</strong><br />you@columbia.edu</div>
+          <div class="contact-item"><strong>GitHub</strong><br /><a href="#">github.com/yourname</a></div>
+          <div class="contact-item"><strong>Scholar</strong><br /><a href="#">Google Scholar</a></div>
+          <div class="contact-item"><strong>LinkedIn</strong><br /><a href="#">LinkedIn</a></div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> Sam Hirst</span>
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
