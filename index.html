@@ -3,259 +3,618 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>Sam Hirst | Evolutionary Genomics</title>
-    <meta
-      name="description"
-      content="Sam Hirst is an evolutionary biologist studying how genomic architecture and molecular variation translate into complex trait evolution across space and time, including venom evolution and migration."
-    />
-
+    <meta name="description" content="Sam Hirst is an evolutionary biologist studying how genomic architecture and molecular variation translate into complex trait evolution — venom evolution, pangenomes, and migration." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
   </head>
 
   <body>
-    <!-- Top nav -->
-    <header class="site-header">
+
+    <!-- ── Navigation ─────────────────────────────────────── -->
+    <header class="site-header" id="site-header">
       <div class="container nav-row">
         <a class="brand" href="#home">Sam Hirst</a>
-
         <nav class="nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#cv">CV</a>
-          <a href="#contact">Contact</a>
+          <a href="#home"         class="nav-link active">Home</a>
+          <a href="#about"        class="nav-link">About</a>
+          <a href="#research"     class="nav-link">Research</a>
+          <a href="#publications" class="nav-link">Publications</a>
+          <a href="#fieldwork"    class="nav-link">Field Work</a>
+          <a href="#contact"      class="nav-link">Contact</a>
         </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
-    <!-- Hero -->
-    <main id="home" class="container">
-      <section class="hero">
-        <div class="hero-text">
-          <h1>Sam Hirst</h1>
-          <p class="lead">
-            Postdoctoral researcher • Pangenomes &amp; structural variation • Venom evolution
+    <!-- Mobile full-screen nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#home"         class="nav-link">Home</a>
+      <a href="#about"        class="nav-link">About</a>
+      <a href="#research"     class="nav-link">Research</a>
+      <a href="#publications" class="nav-link">Publications</a>
+      <a href="#fieldwork"    class="nav-link">Field Work</a>
+      <a href="#contact"      class="nav-link">Contact</a>
+    </div>
+
+    <!-- ── Hero ──────────────────────────────────────────── -->
+    <section id="home" class="hero">
+      <div class="hero-bg" id="hero-bg" style="background-image: url('images/Baja_2022-39.jpg')"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Evolutionary Biology &amp; Genomics</p>
+        <h1 class="hero-name">Sam Hirst</h1>
+        <p class="hero-typed-row">I am <span class="typed-text" id="typed-hero"></span></p>
+        <p class="hero-tagline">Postdoctoral Researcher &nbsp;·&nbsp; Columbia University</p>
+        <div class="hero-links">
+          <a href="#research" class="btn btn-primary">My Research</a>
+          <a href="cv.pdf" class="btn btn-ghost" target="_blank" rel="noreferrer">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <main>
+
+      <!-- ── About ─────────────────────────────────────────── -->
+      <section id="about" class="section section-light">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">About Me</span>
+            <h2>Connecting Molecules to Ecosystems</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-photos">
+              <div class="photo-main fade-in">
+                <img src="images/Baja_2022-80.jpg" alt="Sam Hirst holding a rattlesnake in Baja California" />
+              </div>
+              <div class="photo-sub fade-in" style="transition-delay:0.15s">
+                <div class="photo-sub-item">
+                  <img src="images/Baja_2022-5.jpg" alt="Sam Hirst examining a venom sample in the field" />
+                </div>
+                <div class="photo-sub-item">
+                  <img src="images/Headshot.jpg" alt="Sam Hirst in the field" />
+                </div>
+              </div>
+            </div>
+
+            <div class="about-text fade-in" style="transition-delay:0.1s">
+              <p class="lead-text">
+                I am an evolutionary biologist interested in how traits change across space and time.
+              </p>
+              <p>
+                My research focuses on understanding how molecular variation—at the level of genes and
+                genomes—translates into functional and phenotypic differences among populations and species.
+              </p>
+              <p>
+                Much of my work has centered on venomous snakes and the evolution of venom as a complex
+                adaptive trait. I study venom variation using integrative genomic approaches, including
+                population genomics, whole-genome sequencing, transcriptomics (RNA-seq of venom glands),
+                and proteomic analyses. By combining molecular data with functional assays, I aim to
+                connect genetic differences to ecologically relevant variation in phenotype.
+              </p>
+              <p>
+                I am also broadly interested in identifying general principles linking molecular evolution
+                to trait evolution across diverse systems. More recently, I have been applying similar
+                genomic frameworks to migratory behavior and migration-associated fitness differences in
+                songbirds.
+              </p>
+
+              <div class="theme-tags">
+                <span class="tag">Population Genomics</span>
+                <span class="tag">Venom Evolution</span>
+                <span class="tag">Transcriptomics</span>
+                <span class="tag">Proteomics</span>
+                <span class="tag">Pangenomics</span>
+                <span class="tag">Migration &amp; Fitness</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Research ──────────────────────────────────────── -->
+      <section id="research" class="section section-dark">
+        <div class="container">
+          <div class="section-header light">
+            <span class="section-tag">Research</span>
+            <h2>Current &amp; Past Projects</h2>
+          </div>
+
+          <div class="research-grid">
+
+            <article class="research-card fade-in">
+              <div class="research-card-body">
+                <div class="research-number">01</div>
+                <h3>Pangenomes &amp; Structural Variation</h3>
+                <p class="research-affil">Delmore Lab &nbsp;·&nbsp; Columbia University &nbsp;·&nbsp; Current</p>
+                <p>
+                  As a Postdoctoral Researcher in the Delmore Lab, I investigate how genomic architecture
+                  shapes the evolution of complex traits. I study how structural variants—inversions and
+                  large-scale insertions/deletions—contribute to variation in migratory behavior and influence
+                  hybrid fitness in the Swainson's thrush.
+                </p>
+                <p>
+                  Migration is a complex, polygenic trait integrating behavior, physiology, and timing across
+                  annual cycles. By combining pangenomics and fitness data, I aim to understand how genomic
+                  architecture constrains or facilitates adaptation and speciation.
+                </p>
+              </div>
+            </article>
+
+            <article class="research-card has-image fade-in" style="transition-delay:0.1s">
+              <div class="research-card-img">
+                <img src="images/C. enyo 2 ES 2.JPG" alt="Crotalus enyo on a Baja California island" />
+              </div>
+              <div class="research-card-body">
+                <div class="research-number">02</div>
+                <h3>Venom Evolution on Islands</h3>
+                <p class="research-affil">Margres Lab &nbsp;·&nbsp; University of South Florida &nbsp;·&nbsp; Ph.D.</p>
+                <p>
+                  For my dissertation, I tested whether Island Biogeography Theory can predict the
+                  evolution of functional trait complexity—specifically venom complexity in rattlesnakes
+                  across islands in the Gulf of California.
+                </p>
+                <p>
+                  Venom is a polygenic trait shaped by predator–prey interactions and dietary breadth.
+                  Using IBT predictions about island area, isolation, and species diversity, I connected
+                  ecological context to venom complexity, genomic diversity, and structural variation
+                  across island populations.
+                </p>
+              </div>
+            </article>
+
+            <article class="research-card has-image fade-in" style="transition-delay:0.2s">
+              <div class="research-card-img">
+                <img src="images/Baja_2022-71.jpg" alt="Venom extraction from a rattlesnake in the field" />
+              </div>
+              <div class="research-card-body">
+                <div class="research-number">03</div>
+                <h3>Integrative Venom Genomics</h3>
+                <p class="research-affil">Multi-institutional collaborations</p>
+                <p>
+                  Across multiple projects I apply whole-genome sequencing, RNA-seq of venom glands, and
+                  proteomic analyses to understand the molecular basis of venom variation. By integrating
+                  these data types, I connect sequence-level variation to protein composition and
+                  functional phenotypic differences across populations and species.
+                </p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Publications ───────────────────────────────────── -->
+      <section id="publications" class="section section-light">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Publications</span>
+            <h2>Peer-Reviewed Research</h2>
+          </div>
+
+          <ol class="pub-list">
+
+            <li class="pub-item fade-in">
+              <div class="pub-year">In&nbsp;Press</div>
+              <div class="pub-content">
+                <p>
+                  <strong>Hirst SR*</strong>, VanHorn CM†, Franz-Chávez H, Vásquez-Cruz V,
+                  Kelly-Hernández A, Rosales-García RA, Castañeda-Gaytán G, Borja M, Parkinson CL,
+                  Strickland JL, Margres MJ. <em>Accepted.</em> Lack of an Ontogenetic Shift in
+                  <em>Crotalus enyo cerralvensis</em> Venom Supports Integration of Cranial Morphology
+                  and Venom Expression in Rattlesnakes. <em>Western North American Naturalist</em>.
+                </p>
+              </div>
+            </li>
+
+            <li class="pub-item featured fade-in" style="transition-delay:0.07s">
+              <div class="pub-year">2025</div>
+              <div class="pub-content">
+                <div class="pub-badge">Editor's Choice &nbsp;·&nbsp; Cover Article</div>
+                <p>
+                  <strong>Hirst SR*</strong>, Beer MA, VanHorn CM†, Rautsaw RM, Franz-Chávez H,
+                  Lopez BR, Ramirez Chaparro R, Rosales-García RA, Vásquez-Cruz V, Kelly-Hernández A,
+                  Salinas Amézquita SA, López Martínez DE, Perez Fiol T, Rubio Rincón A,
+                  Whittington AC, Castañeda-Gaytán G, Borja M, Parkinson CL, Strickland JL,
+                  Margres MJ*. Area-Induced Changes in Competition Drive Rapid Venom Complexity
+                  Evolution Across Island Rattlesnakes. <em>Evolution</em>. 79(8):1419–1432.
+                </p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1093/evolut/qpaf074" target="_blank" rel="noreferrer">DOI</a>
+                  <a href="https://www.usf.edu/news/2025/what-rattlesnake-venom-can-teach-us-about-evolution.aspx" target="_blank" rel="noreferrer">USF Press Release</a>
+                  <a href="https://stpetecatalyst.com/usf-researchers-find-island-snakes-adapt-venom/" target="_blank" rel="noreferrer">St. Pete Catalyst</a>
+                  <a href="https://www.theguardian.com/environment/ng-interactive/2025/apr/27/rattlesnake-venom-evolves-study" target="_blank" rel="noreferrer">The Guardian</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="pub-item fade-in" style="transition-delay:0.14s">
+              <div class="pub-year">2025</div>
+              <div class="pub-content">
+                <p>
+                  Mochales Riaño G*, <strong>Hirst SR</strong>, Talavera A, Burriel-Carranza B,
+                  Pagone V, Estarellas M, Busschau T, Boissinot S, Hogan MP, Tena-Garcés J, Pla D.
+                  Chromosome-level reference genome for the medically important Arabian horned viper
+                  (<em>Cerastes gasperettii</em>). <em>GigaScience</em>. giaf030.
+                </p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1093/gigascience/giaf030" target="_blank" rel="noreferrer">DOI</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="pub-item fade-in" style="transition-delay:0.21s">
+              <div class="pub-year">2025</div>
+              <div class="pub-content">
+                <p>
+                  Neri-Castro E*, Borja M, Castañeda-Gaytán G, Alagón A, Strickland JL,
+                  Parkinson CL, Gutierrez-Martínez A, Rodriguez-López B, Zarzosa V, Lomonte B,
+                  Saviola AJ, Fernández J, Smith CF, Hansen KC, Pérez-Robles A, Castañeda-Pérez A,
+                  <strong>Hirst SR</strong>, Olvera F, Fernández-Badillo L, Sigala J, Jones J,
+                  Montaño-Ruvalcaba C, Ramírez-Chaparro R, Acosta-Campaña G, Margres MJ. Venom
+                  variation and ontogenetic changes in the <em>Crotalus molossus</em> complex:
+                  insights into composition, activities, and antivenom neutralization.
+                  <em>Comparative Biochemistry and Physiology, Part C</em>. 290, 110129.
+                </p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1016/j.cbpc.2025.110129" target="_blank" rel="noreferrer">DOI</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="pub-item fade-in" style="transition-delay:0.28s">
+              <div class="pub-year">2024</div>
+              <div class="pub-content">
+                <p>
+                  <strong>Hirst SR*</strong>, Rautsaw RM, VanHorn CM†, Beer MA, McDonald PJ,
+                  Rosales-García RA, Lopez BR, Rubio Rincón A, Franz-Chávez H, Vásquez-Cruz V,
+                  Kelly-Hernández A, Storfer A, Borja M, Castañeda-Gaytán G, Frandsen PB,
+                  Parkinson CL, Strickland JL, Margres MJ*. Where the 'Ruber' Meets the Road:
+                  Using the Genome of the Red Diamond Rattlesnake to Unravel the Evolutionary
+                  Processes Driving Venom Evolution. <em>Genome Biology and Evolution</em>. 16(9).
+                </p>
+                <div class="pub-links">
+                  <a href="https://doi.org/10.1093/gbe/evae198" target="_blank" rel="noreferrer">DOI</a>
+                </div>
+              </div>
+            </li>
+
+          </ol>
+
+          <p class="pub-note">* indicates equal contribution / lead author &nbsp;·&nbsp; † indicates co-first author</p>
+          <p class="pub-note">
+            <a class="scholar-link" href="https://scholar.google.com/citations?user=B6NbvyMAAAAJ&hl=en" target="_blank" rel="noreferrer">
+              View full list on Google Scholar →
+            </a>
           </p>
-          <p class="meta">
-            Columbia University • New York, NY
-          </p>
-
-          <div class="links">
-            <a class="button" href="#contact">Contact</a>
-            <a class="button ghost" href="cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
-          </div>
-        </div>
-
-        <div class="hero-image">
-          <img src="images/Headshot.jpg" alt="Headshot of Sam Hirst" />
         </div>
       </section>
 
-      <!-- About -->
-      <section id="about" class="section">
-        <h2>About</h2>
-
-        <div class="split">
-          <div>
-            <p>
-              I am an evolutionary biologist interested in how traits change across space and time.
-              My research focuses on understanding how molecular variation—at the level of genes and
-              genomes—translates into functional and phenotypic differences among populations and species.
-            </p>
-
-            <p>
-              Much of my work has centered on venomous snakes and the evolution of venom as a complex adaptive trait.
-              I study venom variation using integrative genomic approaches, including population genomics,
-              whole-genome sequencing, transcriptomics (RNA-seq of venom glands), and proteomic analyses of venom
-              composition. By combining molecular data with functional assays, I aim to connect genetic and genomic
-              differences to ecologically relevant variation in phenotype.
-            </p>
-
-            <p>
-              More broadly, I am interested in identifying general principles that link molecular evolution to trait
-              evolution across diverse systems. While snakes and venom have provided a powerful model, I am widely
-              interested in these questions across multiple species and traits—more recently applying similar genomic
-              frameworks to migratory behavior and migration-associated fitness differences in songbirds.
+      <!-- ── Field Work ─────────────────────────────────────── -->
+      <section id="fieldwork" class="section section-dark">
+        <div class="container">
+          <div class="section-header light">
+            <span class="section-tag">Field Work</span>
+            <h2>From Lab to Landscape</h2>
+            <p class="section-desc">
+              Much of my research has taken me to remote islands and coastlines of the Gulf of California,
+              where I sampled rattlesnake populations across steep environmental gradients. These islands
+              are biologically rich, visually stunning, and logistically challenging—a perfect setting
+              for studying evolution in action.
             </p>
           </div>
 
-          <div class="callout">
-            <p><strong>Research themes</strong></p>
-            <ul>
-              <li>Molecular → functional trait variation</li>
-              <li>Population genomics &amp; adaptation</li>
-              <li>Transcriptomics (RNA-seq) &amp; proteomics</li>
-              <li>Venom evolution &amp; complex traits</li>
-              <li>Migration, movement, and fitness in songbirds</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+          <div class="gallery" id="gallery">
 
-      <!-- Research -->
-      <section id="research" class="section">
-        <h2>Research</h2>
+            <div class="gallery-item gi-tall" data-src="images/Habitat 2 SJ.JPG" data-caption="Isla San José — Gulf of California">
+              <img src="images/Habitat 2 SJ.JPG" alt="Canyon and coastline, Isla San José, Baja California" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-       <article class="card">
-  <div>
-    <h3>Pangenomes &amp; structural variation</h3>
-            <p>
-              As a Postdoctoral Researcher in the Delmore Lab, I investigate how genomic
-              architecture shapes the evolution of complex traits. After completing my Ph.D.
-              examining how island biogeography predicts trait complexity and genetic diversity
-              in rattlesnakes, I now apply similar evolutionary principles to seasonal migration
-              in songbirds.
-            </p>
+            <div class="gallery-item" data-src="images/Baja_2022-39.jpg" data-caption="Aerial view of a Baja California bay at dusk">
+              <img src="images/Baja_2022-39.jpg" alt="Aerial view of Baja California bay" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-            <p>
-              Specifically, I study how structural variants such as inversions and large-scale
-              insertions/deletions contribute to variation in migratory behavior and influence
-              hybrid fitness in the Swainson’s thrush. Migration is a complex, polygenic trait
-              integrating behavior, physiology, and timing across annual cycles. By combining
-              genomics and fitness data, I aim to understand how genomic architecture constrains
-              or facilitates adaptation and speciation.
-            </p>
-  </div>
-</article>
-          
+            <div class="gallery-item" data-src="images/Baja_2022-23.jpg" data-caption="Island archipelago — Gulf of California">
+              <img src="images/Baja_2022-23.jpg" alt="Aerial view of Baja island with turquoise water" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-        <article class="card">
-          <img src="images/Cenyo.JPG" alt="Island rattlesnake research" />
+            <div class="gallery-item" data-src="images/C. enyo 2 ES 2.JPG" data-caption="Crotalus enyo — Isla Espíritu Santo">
+              <img src="images/C. enyo 2 ES 2.JPG" alt="Crotalus enyo rattlesnake on red volcanic rock" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-          <div>
-            <h3>Venom evolution on islands</h3>
+            <div class="gallery-item" data-src="images/C. ruber 2 SJ F.JPG" data-caption="Crotalus ruber — Red Diamond Rattlesnake">
+              <img src="images/C. ruber 2 SJ F.JPG" alt="Red Diamond Rattlesnake coiled in vegetation" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-            <p>
-              For my dissertation, I tested whether Island Biogeography Theory (IBT) can predict
-              the evolution of functional trait complexity, particularly when that trait is shaped
-              by multiple species interactions.
-            </p>
+            <div class="gallery-item gi-wide" data-src="images/Baja_2022-71.jpg" data-caption="Venom extraction in the field">
+              <img src="images/Baja_2022-71.jpg" alt="Close-up of snake venom extraction" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-            <p>
-              I used venom complexity in rattlesnakes as a model system. Venom is a polygenic
-              trait shaped by predator–prey interactions and has been shown to increase with
-              dietary breadth. Using IBT predictions about island area, isolation, and species
-              diversity, we tested explicit hypotheses about how ecological context influences
-              venom complexity across island populations of rattlesnakes in the Gulf of California.
-            </p>
+            <div class="gallery-item" data-src="images/IMG_9021.jpg" data-caption="Desert iguana — Baja California Sur">
+              <img src="images/IMG_9021.jpg" alt="Desert iguana on rock with cactus landscape" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-            <p>
-              Beyond phenotype, I also examine whether IBT predicts genomic diversity, including
-              whether island characteristics shape individual heterozygosity and broader genomic
-              architecture such as structural variation.
-            </p>
-          </div>
-        </article>
-      </section>
+            <div class="gallery-item" data-src="images/IMG_9039.jpg" data-caption="Snake on volcanic coastline — Gulf of California">
+              <img src="images/IMG_9039.jpg" alt="Snake on rocky coastal shoreline at dusk" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-      <!-- Publications -->
-      <section id="publications" class="section">
-        <h2>Publications</h2>
+            <div class="gallery-item" data-src="images/DSC_0514.jpg" data-caption="Lichanura trivirgata — Rosy Boa">
+              <img src="images/DSC_0514.jpg" alt="Rosy Boa coiled on desert rocks" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-        <ol class="pubs" reversed>
-          <li>
-            <strong>Hirst SR*</strong>, VanHorn CM†, Franz-Chávez H, Vásquez-Cruz V, Kelly-Hernández A,
-            Rosales-García RA, Castañeda-Gaytán G, Borja M, Parkinson CL, Strickland JL, Margres MJ.
-            <em>Accepted</em>. Lack of an Ontogenetic Shift in <em>Crotalus enyo cerralvensis</em> Venom Supports
-            Integration of Cranial Morphology and Venom Expression in Rattlesnakes.
-            <em>Western North American Naturalist</em>.
-          </li>
+            <div class="gallery-item" data-src="images/C. enyo 3 ES 1.JPG" data-caption="Crotalus enyo — Gulf of California">
+              <img src="images/C. enyo 3 ES 1.JPG" alt="Crotalus enyo rattlesnake" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-          <li>
-            <strong>Hirst SR*</strong>, Beer MA, VanHorn CM†, Rautsaw RM, Franz-Chávez H, Lopez BR, Ramirez Chaparro R,
-            Rosales-García RA, Vásquez-Cruz V, Kelly-Hernández A, Salinas Amézquita SA, López Martínez DE,
-            Perez Fiol T, Rubio Rincón A, Whittington AC, Castañeda-Gaytán G, Borja M, Parkinson CL,
-            Strickland JL, Margres MJ*. 2025. Area-Induced Changes in Competition Drive Rapid Venom Complexity Evolution
-            Across Island Rattlesnakes. <strong>Editor's Choice and Cover Article</strong>. <em>Evolution</em>. 79(8):1419–1432.
-            <a href="https://doi.org/10.1093/evolut/qpaf074" target="_blank" rel="noreferrer">DOI</a>
-            · <a href="https://www.usf.edu/news/2025/what-rattlesnake-venom-can-teach-us-about-evolution.aspx" target="_blank" rel="noreferrer">USF press release</a>
-            · <a href="https://stpetecatalyst.com/usf-researchers-find-island-snakes-adapt-venom/" target="_blank" rel="noreferrer">St. Pete Catalyst</a>
-            · <a href="https://www.theguardian.com/environment/ng-interactive/2025/apr/27/rattlesnake-venom-evolves-study" target="_blank" rel="noreferrer">The Guardian</a>
-          </li>
+            <div class="gallery-item" data-src="images/C. mithcelli 1 SJ 2.JPG" data-caption="Crotalus mitchellii — Isla San José">
+              <img src="images/C. mithcelli 1 SJ 2.JPG" alt="Crotalus mitchellii speckled rattlesnake" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-          <li>
-            Mochales Riaño G*, <strong>Hirst SR</strong>, Talavera A, Burriel-Carranza B, Pagone V, Estarellas M,
-            Busschau T, Boissinot S, Hogan MP, Tena-Garcés J, Pla D. 2025. Chromosome-level reference genome for the
-            medically important Arabian horned viper (<em>Cerastes gasperettii</em>). <em>GigaScience</em>. giaf030.
-            <a href="https://doi.org/10.1093/gigascience/giaf030" target="_blank" rel="noreferrer">DOI</a>
-          </li>
+            <div class="gallery-item" data-src="images/B. rosaliae 2 ES 2.JPG" data-caption="Boa sigma — Isla Espíritu Santo">
+              <img src="images/B. rosaliae 2 ES 2.JPG" alt="Boa constrictor rosaliae on island" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-          <li>
-            Neri-Castro E*, Borja M, Castañeda-Gaytán G, Alagón A, Strickland JL, Parkinson CL,
-            Gutierrez-Martínez A, Rodriguez-López B, Zarzosa V, Lomonte B, Saviola AJ, Fernández J, Smith CF,
-            Hansen KC, Pérez-Robles A, Castañeda-Pérez A, <strong>Hirst SR</strong>, Olvera F, Fernández-Badillo L,
-            Sigala J, Jones J, Montaño-Ruvalcaba C, Ramírez-Chaparro R, Acosta-Campaña G, Margres MJ. 2025.
-            Venom variation and ontogenetic changes in the <em>Crotalus molossus</em> complex: insights into composition,
-            activities, and antivenom neutralization. <em>Comparative Biochemistry and Physiology, Part C</em>. 290, 110129.
-            <a href="https://doi.org/10.1016/j.cbpc.2025.110129" target="_blank" rel="noreferrer">DOI</a>
-          </li>
+            <div class="gallery-item" data-src="images/Boa 2 ES 1.JPG" data-caption="Boa sigma — Gulf of California island">
+              <img src="images/Boa 2 ES 1.JPG" alt="Boa on Baja island" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-          <li>
-            <strong>Hirst SR*</strong>, Rautsaw RM, VanHorn CM†, Beer MA, McDonald PJ, Rosales-García RA, Lopez BR,
-            Rubio Rincón A, Franz-Chávez H, Vásquez-Cruz V, Kelly-Hernández A, Storfer A, Borja M, Castañeda-Gaytán G,
-            Frandsen PB, Parkinson CL, Strickland JL, Margres MJ*. 2024. Where the ‘Ruber’ Meets the Road: Using the
-            Genome of the Red Diamond Rattlesnake to Unravel the Evolutionary Processes Driving Venom Evolution.
-            <em>Genome Biology and Evolution</em>. 16(9).
-            <a href="https://doi.org/10.1093/gbe/evae198" target="_blank" rel="noreferrer">DOI</a>
-          </li>
-        </ol>
+            <div class="gallery-item" data-src="images/Baja_2022-30.jpg" data-caption="Gulf of California — Baja California">
+              <img src="images/Baja_2022-30.jpg" alt="Baja California coastline" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-        <p class="small">
-          * indicates equal contribution / lead author; † indicates co-first author (update wording if you prefer).
-        </p>
-      </section>
+            <div class="gallery-item" data-src="images/Baja_2022-34.jpg" data-caption="Gulf of California — Baja California">
+              <img src="images/Baja_2022-34.jpg" alt="Baja California landscape" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-      <!-- CV -->
-      <section id="cv" class="section">
-        <h2>CV</h2>
-        <p>
-          <a class="button" href="cv.pdf" target="_blank" rel="noreferrer">Open CV (PDF)</a>
-        </p>
-      </section>
+            <div class="gallery-item" data-src="images/Baja_2022-40.jpg" data-caption="Field camp — Gulf of California">
+              <img src="images/Baja_2022-40.jpg" alt="Baja California field work" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-      <!-- Contact -->
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-item">
-            <strong>Email</strong><br />
-            <a href="mailto:srh2222@columbia.edu">srh2222@columbia.edu</a>
-          </div>
+            <div class="gallery-item" data-src="images/Baja_2022-59.jpg" data-caption="Island survey — Gulf of California">
+              <img src="images/Baja_2022-59.jpg" alt="Baja California island survey" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-          <div class="contact-item">
-            <strong>GitHub</strong><br />
-            <a href="https://github.com/SamuelRHirst" target="_blank" rel="noreferrer">github.com/SamuelRHirst</a>
-          </div>
+            <div class="gallery-item" data-src="images/Baja_2022-75.jpg" data-caption="Baja California — Field work 2022">
+              <img src="images/Baja_2022-75.jpg" alt="Baja California 2022 field work" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-          <div class="contact-item">
-            <strong>Scholar</strong><br />
-            <a
-              href="https://scholar.google.com/citations?user=B6NbvyMAAAAJ&hl=en"
-              target="_blank"
-              rel="noreferrer"
-            >Google Scholar</a>
-          </div>
+            <div class="gallery-item" data-src="images/Baja_2022-92.jpg" data-caption="Baja California — Field work 2022">
+              <img src="images/Baja_2022-92.jpg" alt="Baja California 2022 field work" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
 
-          <div class="contact-item">
-            <strong>LinkedIn</strong><br />
-            <a
-              href="https://www.linkedin.com/in/samuelrhirst/"
-              target="_blank"
-              rel="noreferrer"
-            >LinkedIn</a>
+            <div class="gallery-item" data-src="images/Baja_2022-97.jpg" data-caption="Baja California — Field work 2022">
+              <img src="images/Baja_2022-97.jpg" alt="Baja California 2022 field work" loading="lazy" />
+              <div class="gallery-overlay"><span>View</span></div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <footer class="footer">
-        <span>© <span id="year"></span> Sam Hirst</span>
-      </footer>
+      <!-- ── Contact ────────────────────────────────────────── -->
+      <section id="contact" class="section section-sand">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Contact</span>
+            <h2>Get in Touch</h2>
+            <p class="section-desc">
+              I'm always happy to hear from collaborators, students, and researchers
+              interested in evolutionary biology and genomics.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <a class="contact-card fade-in" href="mailto:srh2222@columbia.edu">
+              <div class="contact-icon">✉</div>
+              <strong>Email</strong>
+              <span>srh2222@columbia.edu</span>
+            </a>
+            <a class="contact-card fade-in" href="https://github.com/SamuelRHirst" target="_blank" rel="noreferrer" style="transition-delay:0.08s">
+              <div class="contact-icon">⌥</div>
+              <strong>GitHub</strong>
+              <span>SamuelRHirst</span>
+            </a>
+            <a class="contact-card fade-in" href="https://scholar.google.com/citations?user=B6NbvyMAAAAJ&hl=en" target="_blank" rel="noreferrer" style="transition-delay:0.16s">
+              <div class="contact-icon">◎</div>
+              <strong>Google Scholar</strong>
+              <span>Publications</span>
+            </a>
+            <a class="contact-card fade-in" href="https://www.linkedin.com/in/samuelrhirst/" target="_blank" rel="noreferrer" style="transition-delay:0.24s">
+              <div class="contact-icon">in</div>
+              <strong>LinkedIn</strong>
+              <span>Samuel R. Hirst</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
+    <!-- ── Lightbox ───────────────────────────────────────── -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <button class="lb-close" id="lb-close" aria-label="Close">&#215;</button>
+      <button class="lb-prev"  id="lb-prev"  aria-label="Previous">&#8249;</button>
+      <button class="lb-next"  id="lb-next"  aria-label="Next">&#8250;</button>
+      <div class="lb-content">
+        <img id="lb-img" src="" alt="" />
+        <p id="lb-caption"></p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <span>© <span id="year"></span> Sam Hirst &nbsp;·&nbsp; Columbia University, New York</span>
+      </div>
+    </footer>
+
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      /* ── Year ───────────────────────────────────────────── */
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      /* ── Typed.js ──────────────────────────────────────── */
+      new Typed('#typed-hero', {
+        strings: [
+          'a postdoctoral researcher.',
+          'an evolutionary biologist.',
+          'a snake biologist.',
+          'a bioinformatician.',
+          'interested in venom evolution.',
+          'studying structural variation.',
+        ],
+        typeSpeed: 48,
+        backSpeed: 28,
+        backDelay: 1800,
+        loop: true,
+        smartBackspace: true,
+      });
+
+      /* ── Parallax hero ─────────────────────────────────── */
+      const heroBg = document.getElementById('hero-bg');
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        heroBg.style.transform = `translateY(${y * 0.35}px) scale(1.05)`;
+      }, { passive: true });
+
+      /* ── Header scroll style ───────────────────────────── */
+      const header = document.getElementById('site-header');
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* ── Active nav via IntersectionObserver ───────────── */
+      const sections  = document.querySelectorAll('section[id]');
+      const navLinks  = document.querySelectorAll('.nav-link');
+
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(l =>
+              l.classList.toggle('active', l.getAttribute('href') === `#${id}`)
+            );
+          }
+        });
+      }, { threshold: 0.35 });
+
+      sections.forEach(s => navObserver.observe(s));
+
+      /* ── Hamburger ─────────────────────────────────────── */
+      const hamburger = document.getElementById('hamburger');
+      const mobileNav = document.getElementById('mobile-nav');
+
+      hamburger.addEventListener('click', () => {
+        const open = mobileNav.classList.toggle('open');
+        hamburger.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+
+      mobileNav.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          hamburger.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+
+      /* ── Fade-in on scroll ─────────────────────────────── */
+      const fadeEls = document.querySelectorAll('.fade-in');
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      fadeEls.forEach(el => fadeObserver.observe(el));
+
+      /* ── Lightbox ──────────────────────────────────────── */
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      const lightbox     = document.getElementById('lightbox');
+      const lbImg        = document.getElementById('lb-img');
+      const lbCaption    = document.getElementById('lb-caption');
+      const srcs         = [...galleryItems].map(i => ({
+        src:     i.dataset.src,
+        caption: i.dataset.caption
+      }));
+      let currentIdx = 0;
+
+      function openLightbox(idx) {
+        currentIdx = idx;
+        lbImg.src = srcs[idx].src;
+        lbCaption.textContent = srcs[idx].caption || '';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      function prevImg() {
+        currentIdx = (currentIdx - 1 + srcs.length) % srcs.length;
+        lbImg.src = srcs[currentIdx].src;
+        lbCaption.textContent = srcs[currentIdx].caption || '';
+      }
+
+      function nextImg() {
+        currentIdx = (currentIdx + 1) % srcs.length;
+        lbImg.src = srcs[currentIdx].src;
+        lbCaption.textContent = srcs[currentIdx].caption || '';
+      }
+
+      galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+      document.getElementById('lb-close').addEventListener('click', closeLightbox);
+      document.getElementById('lb-prev').addEventListener('click', prevImg);
+      document.getElementById('lb-next').addEventListener('click', nextImg);
+
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+      document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape')     closeLightbox();
+        if (e.key === 'ArrowLeft')  prevImg();
+        if (e.key === 'ArrowRight') nextImg();
+      });
+
+      /* ── Touch swipe in lightbox ───────────────────────── */
+      let touchStartX = 0;
+      lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      lightbox.addEventListener('touchend',   e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 50) dx < 0 ? nextImg() : prevImg();
+      });
     </script>
+
   </body>
 </html>
