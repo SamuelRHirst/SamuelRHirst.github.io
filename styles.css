@@ -192,20 +192,17 @@ a   { color: inherit; }
   margin-bottom: 20px;
 }
 
-/* Typed text row */
-.hero-typed-row {
-  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
-  color: rgba(255 255 255 / 0.82);
-  margin-bottom: 6px;
-  min-height: 2rem;
-}
-.hero-typed-row .typed-cursor { color: var(--orange); }
-
 .hero-tagline {
-  font-size: 0.95rem;
-  color: rgba(255 255 255 / 0.5);
+  font-size: 1.1rem;
+  color: rgba(255 255 255 / 0.75);
+  margin-bottom: 10px;
+}
+
+.hero-sub {
+  font-size: 0.9rem;
+  color: rgba(255 255 255 / 0.45);
   margin-bottom: 38px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .hero-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
@@ -267,7 +264,7 @@ a   { color: inherit; }
 }
 
 /* ── Section bases ───────────────────────────────────────── */
-.section { padding: 100px 0; }
+.section { padding: 84px 0; }
 .section-light { background: var(--cream); }
 .section-dark  { background: var(--dark);  color: white; }
 .section-sand  { background: #eee8d8; }
@@ -309,8 +306,8 @@ a   { color: inherit; }
 /* ── About ───────────────────────────────────────────────── */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 72px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 52px;
   align-items: start;
 }
 
@@ -319,26 +316,26 @@ a   { color: inherit; }
 
 .photo-main img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 340px;
   object-fit: cover;
-  object-position: center top;
-  border-radius: 16px;
-  box-shadow: 0 28px 60px rgba(0 0 0 / 0.2);
+  object-position: center 20%;
+  border-radius: 14px;
+  box-shadow: 0 20px 48px rgba(0 0 0 / 0.18);
 }
 
 .photo-sub {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 12px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .photo-sub-item img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 180px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(0 0 0 / 0.14);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0 0 0 / 0.12);
 }
 
 /* About text */
@@ -406,12 +403,13 @@ a   { color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-height: 250px;
+  min-height: 220px;
+  max-height: 320px;
   transition: transform 0.5s ease;
 }
 .research-card:hover .research-card-img img { transform: scale(1.04); }
 
-.research-card-body { padding: 36px 40px; }
+.research-card-body { padding: 28px 32px; }
 
 .research-number {
   font-size: 0.7rem;
@@ -531,8 +529,8 @@ a   { color: inherit; }
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 220px;
-  gap: 10px;
+  grid-auto-rows: 190px;
+  gap: 8px;
 }
 
 .gallery-item         { grid-column: span 1; grid-row: span 1; }

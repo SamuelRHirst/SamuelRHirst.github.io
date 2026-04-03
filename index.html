@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
   </head>
 
   <body>
@@ -49,8 +48,8 @@
       <div class="hero-content">
         <p class="hero-eyebrow">Evolutionary Biology &amp; Genomics</p>
         <h1 class="hero-name">Sam Hirst</h1>
-        <p class="hero-typed-row">I am <span class="typed-text" id="typed-hero"></span></p>
         <p class="hero-tagline">Postdoctoral Researcher &nbsp;·&nbsp; Columbia University</p>
+        <p class="hero-sub">Pangenomes &nbsp;·&nbsp; Structural Variation &nbsp;·&nbsp; Venom Evolution</p>
         <div class="hero-links">
           <a href="#research" class="btn btn-primary">My Research</a>
           <a href="cv.pdf" class="btn btn-ghost" target="_blank" rel="noreferrer">Download CV</a>
@@ -480,22 +479,6 @@
       /* ── Year ───────────────────────────────────────────── */
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      /* ── Typed.js ──────────────────────────────────────── */
-      new Typed('#typed-hero', {
-        strings: [
-          'a postdoctoral researcher.',
-          'an evolutionary biologist.',
-          'a snake biologist.',
-          'a bioinformatician.',
-          'interested in venom evolution.',
-          'studying structural variation.',
-        ],
-        typeSpeed: 48,
-        backSpeed: 28,
-        backDelay: 1800,
-        loop: true,
-        smartBackspace: true,
-      });
 
       /* ── Parallax hero ─────────────────────────────────── */
       const heroBg = document.getElementById('hero-bg');
