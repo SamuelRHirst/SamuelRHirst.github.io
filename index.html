@@ -37,7 +37,7 @@
           <a href="#fieldwork"    class="nav-link">Field Work</a>
           <a href="#contact"      class="nav-link">Contact</a>
         </nav>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -90,10 +90,10 @@
               </div>
               <div class="photo-sub fade-in" style="transition-delay:0.15s">
                 <div class="photo-sub-item">
-                  <img src="images/Baja_2022-80.jpg" alt="Sam Hirst holding a rattlesnake in Baja California" />
+                  <img src="images/thumbs/Baja_2022-80.jpg" loading="lazy" alt="Sam Hirst holding a rattlesnake in a tube in Baja California" />
                 </div>
                 <div class="photo-sub-item">
-                  <img src="images/Baja_2022-5.jpg" alt="Sam Hirst examining a venom sample in the field" />
+                  <img src="images/thumbs/Baja_2022-5.jpg" loading="lazy" alt="Sam Hirst examining a venom sample in the field" />
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@
 
             <article class="research-card has-image fade-in" style="transition-delay:0.1s">
               <div class="research-card-img">
-                <img src="images/C. enyo 2 ES 2.JPG" alt="Crotalus enyo on a Baja California island" style="object-position: 15% 90%;" />
+                <img src="images/thumbs/C. enyo 2 ES 2.JPG" loading="lazy" alt="Crotalus enyo on a Baja California island" style="object-position: 15% 90%;" />
               </div>
               <div class="research-card-body">
                 <div class="research-number">02</div>
@@ -190,7 +190,7 @@
 
             <article class="research-card has-image fade-in" style="transition-delay:0.2s">
               <div class="research-card-img">
-                <img src="images/Baja_2022-71.jpg" alt="Venom extraction from a rattlesnake in the field" />
+                <img src="images/thumbs/Baja_2022-71.jpg" loading="lazy" alt="Venom extraction from a rattlesnake in the field" />
               </div>
               <div class="research-card-body">
                 <div class="research-number">03</div>
@@ -223,7 +223,7 @@
               <div class="pub-year">2026</div>
               <div class="pub-content">
                 <p>
-                  <strong>Hirst SR*†</strong>, Neri-Castro E†, Vázquez-García E, Zarazosa V, Olvera F,  Alagón A, 
+                  <strong>Hirst SR*†</strong>, Neri-Castro E†, Vázquez-García E, Zarzosa V, Olvera F, Alagón A, 
                   Franz-Chávez H, Castañeda-Gaytán G, Parkinson CL, Strickland JL, Borja M, Margres MJ.
                   Functional venom activity and antivenom neutralization in rattlesnakes 
                   across Baja California and Gulf of California islands.
@@ -248,7 +248,7 @@
                 </p>
                 <div class="pub-links">
                   <a href="https://doi.org/10.1093/gbe/evag131" target="_blank" rel="noreferrer">DOI</a>
-                  <a href="pdf/Margres_et_al_GBE_2026.pdf"" target="_blank" rel="noreferrer">PDF</a>
+                  <a href="pdf/Margres_et_al_GBE_2026.pdf" target="_blank" rel="noreferrer">PDF</a>
                 </div>
               </div>
             </li>
@@ -393,25 +393,30 @@
               <div class="pub-content">
                 <p>
                   McDonald PJ, Margres MJ, Gallinson D, Guedouar E, <strong>Hirst SR</strong>,
-                  Mulla A, Gardner C, McCargar G. Plestiodon egregius (Mole Skink) Geographic Distribution.
+                  Mulla A, Gardner C, McCargar G. <em>Plestiodon egregius</em> (Mole Skink) Geographic Distribution.
                   <em>Herpetological Review</em>. 56(2):162.
                 </p>
                 <div class="pub-links">
                   <a href="pdf/McDonald_Skink.pdf" target="_blank" rel="noreferrer">PDF</a>
                 </div>
+              </div>
             </li>
 
             <li class="pub-item fade-in" style="transition-delay:0.07s">
               <div class="pub-year">2023</div>
               <div class="pub-content">
                 <p>
-                  <strong>Hirst SR</strong>, Vásquez-Cruz V, Strickland JL, Margres MJ. The Hunchback of Isla Piojo:
+                  <strong>Hirst SR*†</strong>, Vásquez-Cruz V†, Kelly-Hernández A, Franz-Chávez H,
+                  Rubio Rincón A, Salinas Amézquita SA, Grünwald CI, Borja M, Castañeda-Gaytán G,
+                  Strickland JL, Margres MJ. The Hunchback of Isla Piojo:
                   First Record of Putative Kyphosis in the Spiny Chuckwalla
-                  (<em>Sauromalus hispidus</em>).
+                  (<em>Sauromalus hispidus</em>). <em>Bulletin of the Chicago Herpetological Society</em>.
+                  58(11):177–178.
                 </p>
                 <div class="pub-links">
                   <a href="pdf/Hirst_et_al_Sauromalus_hispidus_2023.pdf" target="_blank" rel="noreferrer">PDF</a>
                 </div>
+              </div>
             </li>
 
             <li class="pub-item fade-in" style="transition-delay:0.14s">
@@ -456,122 +461,122 @@
           <div class="gallery" id="gallery">
 
             <div class="gallery-item gi-tall" data-src="images/Habitat 2 SJ.JPG" data-caption="Isla San José — Gulf of California">
-              <img src="images/Habitat 2 SJ.JPG" alt="Canyon and coastline, Isla San José, Baja California" loading="lazy" />
+              <img src="images/thumbs/Habitat 2 SJ.JPG" alt="Canyon and coastline, Isla San José, Baja California" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/Baja_2022-39.jpg" data-caption="Aerial view of a Isla San Francisco">
-              <img src="images/Baja_2022-39.jpg" alt="Aerial view of Baja California bay" loading="lazy" />
+            <div class="gallery-item" data-src="images/Baja_2022-39.jpg" data-caption="Aerial view of Isla San Francisco">
+              <img src="images/thumbs/Baja_2022-39.jpg" alt="Aerial view of Isla San Francisco" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/Baja_2022-23.jpg" data-caption="Aerial view of Isla Espritu Santo">
-              <img src="images/Baja_2022-23.jpg" alt="Aerial view of Baja island with turquoise water" loading="lazy" />
+            <div class="gallery-item" data-src="images/Baja_2022-23.jpg" data-caption="Aerial view of Isla Espíritu Santo">
+              <img src="images/thumbs/Baja_2022-23.jpg" alt="Aerial view of Isla Espíritu Santo with turquoise water" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/C. enyo 2 ES 2.JPG" data-caption="Crotalus enyo — Isla Espíritu Santo">
-              <img src="images/C. enyo 2 ES 2.JPG" alt="Crotalus enyo rattlesnake on red volcanic rock" loading="lazy" />
+              <img src="images/thumbs/C. enyo 2 ES 2.JPG" alt="Crotalus enyo rattlesnake on red volcanic rock" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/C. ruber 2 SJ F.JPG" data-caption="Crotalus ruber — Red Diamond Rattlesnake on Isla San Jose">
-              <img src="images/C. ruber 2 SJ F.JPG" alt="Red Diamond Rattlesnake coiled in vegetation" loading="lazy" />
+            <div class="gallery-item" data-src="images/C. ruber 2 SJ F.JPG" data-caption="Crotalus ruber — Red Diamond Rattlesnake on Isla San José">
+              <img src="images/thumbs/C. ruber 2 SJ F.JPG" alt="Red diamond rattlesnake (Crotalus ruber) coiled beneath pink flowers" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item gi-wide" data-src="images/Baja_2022-71.jpg" data-caption="Venom extraction in the field">
-              <img src="images/Baja_2022-71.jpg" alt="Close-up of snake venom extraction" loading="lazy" />
+              <img src="images/thumbs/Baja_2022-71.jpg" alt="Close-up of snake venom extraction" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/IMG_9021.jpg" data-caption="Chuckwalla">
-              <img src="images/IMG_9021.jpg" alt="Desert iguana on rock with cactus landscape" loading="lazy" />
+              <img src="images/thumbs/IMG_9021.jpg" alt="Chuckwalla basking on a rock among cacti" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/IMG_9039.jpg" data-caption="Crotalus angelensis - Angel Island Rattlesnake ">
-              <img src="images/IMG_9039.jpg" alt="Snake on rocky coastal shoreline at dusk" loading="lazy" />
+            <div class="gallery-item" data-src="images/IMG_9039.jpg" data-caption="Crotalus angelensis - Angel Island Rattlesnake">
+              <img src="images/thumbs/IMG_9039.jpg" alt="Angel Island rattlesnake (Crotalus angelensis) on dark shoreline rocks" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/DSC_0458.jpg" data-caption="Crotalus angelensis head - Angel Island Rattlesnake">
-              <img src="images/DSC_0458.jpg" alt="Snake on rocky coastal shoreline at dusk" loading="lazy" />
+              <img src="images/thumbs/DSC_0458.jpg" alt="Close-up of the head of an Angel Island rattlesnake (Crotalus angelensis)" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/DSC_0514.jpg" data-caption="Lichanura trivirgata — Rosy Boa (Baja California)">
-              <img src="images/DSC_0514.jpg" alt="Rosy Boa coiled on desert rocks" loading="lazy" />
+              <img src="images/thumbs/DSC_0514.jpg" alt="Rosy Boa coiled on desert rocks" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/C. enyo 3 ES 1.JPG" data-caption="Crotalus enyo Isla Espritu Santo">
-              <img src="images/C. enyo 3 ES 1.JPG" alt="Crotalus enyo rattlesnake" loading="lazy" />
+            <div class="gallery-item" data-src="images/C. enyo 3 ES 1.JPG" data-caption="Crotalus enyo Isla Espíritu Santo">
+              <img src="images/thumbs/C. enyo 3 ES 1.JPG" alt="Baja California rattlesnake (Crotalus enyo) on red rock above the sea" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/C. mithcelli 1 SJ 2.JPG" data-caption="Crotalus mitchellii — Isla San José">
-              <img src="images/C. mithcelli 1 SJ 2.JPG" alt="Crotalus mitchellii speckled rattlesnake" loading="lazy" />
+              <img src="images/thumbs/C. mithcelli 1 SJ 2.JPG" alt="Speckled rattlesnake (Crotalus mitchellii) on pale rocks on Isla San José" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/B. rosaliae 2 ES 2.JPG" data-caption="Bogertophis rosaliae - Baja California Rat Snake - Isla Espritu Santo">
-              <img src="images/B. rosaliae 2 ES 2.JPG" alt="Boa constrictor rosaliae on island" loading="lazy" />
+            <div class="gallery-item" data-src="images/B. rosaliae 2 ES 2.JPG" data-caption="Bogertophis rosaliae - Baja California Rat Snake - Isla Espíritu Santo">
+              <img src="images/thumbs/B. rosaliae 2 ES 2.JPG" alt="Baja California rat snake (Bogertophis rosaliae) on Isla Espíritu Santo" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/Boa 2 ES 1.JPG" data-caption="Lichanura trivirgata — Rosy Boa (Isla Espritu Santo)">
-              <img src="images/Boa 2 ES 1.JPG" alt="Boa on Baja island" loading="lazy" />
+            <div class="gallery-item" data-src="images/Boa 2 ES 1.JPG" data-caption="Lichanura trivirgata — Rosy Boa (Isla Espíritu Santo)">
+              <img src="images/thumbs/Boa 2 ES 1.JPG" alt="Striped rosy boa (Lichanura trivirgata) on red rock" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/Baja_2022-30.jpg" data-caption="Isla Espritu Santo">
-              <img src="images/Baja_2022-30.jpg" alt="Baja California coastline" loading="lazy" />
+            <div class="gallery-item" data-src="images/Baja_2022-30.jpg" data-caption="Isla Espíritu Santo">
+              <img src="images/thumbs/Baja_2022-30.jpg" alt="Sandy bay framed by cardón cacti on Isla Espíritu Santo" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/Baja_2022-34.jpg" data-caption="Cool plants">
-              <img src="images/Baja_2022-34.jpg" alt="Baja California landscape" loading="lazy" />
+              <img src="images/thumbs/Baja_2022-34.jpg" alt="Silhouette of a desert shrub against the twilight sky" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/Baja_2022-40.jpg" data-caption="Night sky on Isla San Jose">
-              <img src="images/Baja_2022-40.jpg" alt="Baja California field work" loading="lazy" />
+            <div class="gallery-item" data-src="images/Baja_2022-40.jpg" data-caption="Night sky on Isla San José">
+              <img src="images/thumbs/Baja_2022-40.jpg" alt="Milky Way over a ridge on Isla San José" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/Baja_2022-59.jpg" data-caption="Beach Bums on Isla San Jose">
-              <img src="images/Baja_2022-59.jpg" alt="Baja California island survey" loading="lazy" />
+            <div class="gallery-item" data-src="images/Baja_2022-59.jpg" data-caption="Beach Bums on Isla San José">
+              <img src="images/thumbs/Baja_2022-59.jpg" alt="Aerial view of a beach and anchored boats on Isla San José" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/Baja_2022-75.jpg" data-caption="Look at me, I'm doing science">
-              <img src="images/Baja_2022-75.jpg" alt="Baja California 2022 field work" loading="lazy" />
+              <img src="images/thumbs/Baja_2022-75.jpg" alt="Sam Hirst holding a venom sample tube in the field" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/Baja_2022-92.jpg" data-caption="Looking all night for snakes!">
-              <img src="images/Baja_2022-92.jpg" alt="Baja California 2022 field work" loading="lazy" />
+              <img src="images/thumbs/Baja_2022-92.jpg" alt="Lone headlamp in a canyon at night while searching for snakes" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/Baja_2022-97.jpg" data-caption="Best field teams of all time">
-              <img src="images/Baja_2022-97.jpg" alt="Baja California 2022 field work" loading="lazy" />
+              <img src="images/thumbs/Baja_2022-97.jpg" alt="Field team posing in front of an orange building" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/Hypsiglena SJ.JPG" data-caption="Hypsiglena on Isla San Jose">
-              <img src="images/Hypsiglena SJ.JPG" alt="Baja California 2022 field work" loading="lazy" />
+            <div class="gallery-item" data-src="images/Hypsiglena SJ.JPG" data-caption="Hypsiglena on Isla San José">
+              <img src="images/thumbs/Hypsiglena SJ.JPG" alt="Night snake (Hypsiglena) on gravel on Isla San José" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
             <div class="gallery-item" data-src="images/Crotalus phyrrus isla smith 1.JPG" data-caption="Crotalus pyrrhus on Isla Smith">
-              <img src="images/Crotalus phyrrus isla smith 1.JPG" alt="Baja California 2022 field work" loading="lazy" />
+              <img src="images/thumbs/Crotalus phyrrus isla smith 1.JPG" alt="Southwestern speckled rattlesnake (Crotalus pyrrhus) at night on gray rock, Isla Smith" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
-            <div class="gallery-item" data-src="images/C. mitchelli 1 ES.JPG" data-caption="Crotalus mitchellii on Isla Espritu Santo">
-              <img src="images/C. mitchelli 1 ES.JPG" alt="Baja California 2022 field work" loading="lazy" />
+            <div class="gallery-item" data-src="images/C. mitchelli 1 ES.JPG" data-caption="Crotalus mitchellii on Isla Espíritu Santo">
+              <img src="images/thumbs/C. mitchelli 1 ES.JPG" alt="Speckled rattlesnake (Crotalus mitchellii) coiled on red rock on Isla Espíritu Santo" loading="lazy" decoding="async" />
               <div class="gallery-overlay"><span>View</span></div>
             </div>
 
@@ -653,7 +658,8 @@
 
       /* ── Parallax hero ─────────────────────────────────── */
       const heroBg = document.getElementById('hero-bg');
-      window.addEventListener('scroll', () => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion) window.addEventListener('scroll', () => {
         const y = window.scrollY;
         heroBg.style.transform = `translateY(${y * 0.35}px) scale(1.05)`;
       }, { passive: true });
@@ -687,6 +693,7 @@
       hamburger.addEventListener('click', () => {
         const open = mobileNav.classList.toggle('open');
         hamburger.classList.toggle('open', open);
+        hamburger.setAttribute('aria-expanded', open);
         document.body.style.overflow = open ? 'hidden' : '';
       });
 
@@ -694,6 +701,7 @@
         link.addEventListener('click', () => {
           mobileNav.classList.remove('open');
           hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
           document.body.style.overflow = '';
         });
       });
