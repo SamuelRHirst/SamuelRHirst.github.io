@@ -892,3 +892,15 @@ a   { color: inherit; }
   }
   .fm-panel.open { transform: none; }
 }
+
+.fm-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap; margin-bottom: 14px; }
+.fm-toolbar .fm-hint { margin: 0; }
+.fm-areas { display: inline-flex; padding: 3px; border-radius: 999px; border: 1px solid rgba(255 255 255 / 0.18); }
+.fm-area {
+  font: inherit; font-size: 0.8rem; cursor: pointer; padding: 5px 14px; border-radius: 999px;
+  background: transparent; border: 0; color: rgba(255 255 255 / 0.7); transition: background 0.2s, color 0.2s;
+}
+.fm-area:hover { color: #fff; }
+.fm-area.active { background: rgba(255 255 255 / 0.14); color: #fff; font-weight: 600; }
+.fm-nd { color: rgba(255 255 255 / 0.6); }
+.fm-chip[hidden] { display: none; }
