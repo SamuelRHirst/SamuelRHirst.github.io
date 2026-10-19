@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -458,6 +459,16 @@
             </p>
           </div>
 
+          <div class="fieldmap-wrap fade-in">
+            <p class="fm-hint">Click an island to explore the species, photos, and research from it.</p>
+            <div class="fieldmap-stage">
+              <div id="fieldmap" class="fieldmap" role="region" aria-label="Map of sampled islands in the Gulf of California"></div>
+              <aside id="fm-panel" class="fm-panel" aria-live="polite"></aside>
+            </div>
+            <div id="fm-chips" class="fm-chips" aria-label="Islands"></div>
+            <p class="fm-footnote">Markers show island centres only. Collecting localities are withheld to protect island endemics.</p>
+          </div>
+
           <div class="gallery" id="gallery">
 
             <div class="gallery-item gi-tall" data-src="images/Habitat 2 SJ.JPG" data-caption="Isla San José — Gulf of California">
@@ -756,6 +767,7 @@
       }
 
       galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+      window.openLightboxBySrc = src => { const i = srcs.findIndex(s => s.src === src); if (i >= 0) openLightbox(i); };
       document.getElementById('lb-close').addEventListener('click', closeLightbox);
       document.getElementById('lb-prev').addEventListener('click', prevImg);
       document.getElementById('lb-next').addEventListener('click', nextImg);
@@ -777,6 +789,8 @@
         if (Math.abs(dx) > 50) dx < 0 ? nextImg() : prevImg();
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="fieldmap.js"></script>
 
   </body>
 </html>
