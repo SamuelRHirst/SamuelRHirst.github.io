@@ -39,7 +39,7 @@ window.PLACE_PHOTOS = [
     "place": "angel",
     "src": "images/places/angel-06.jpg",
     "thumb": "images/places/thumbs/angel-06.jpg",
-    "caption": "Snake on Isla Ángel de la Guarda",
+    "caption": "Western threadsnake (Leptotyphlops humilis)",
     "credit": ""
   },
   {
@@ -151,21 +151,21 @@ window.PLACE_PHOTOS = [
     "place": "bcpen",
     "src": "images/places/bcpen-06.jpg",
     "thumb": "images/places/thumbs/bcpen-06.jpg",
-    "caption": "Speckled rattlesnake",
+    "caption": "Southwestern speckled rattlesnake (Crotalus pyrrhus)",
     "credit": ""
   },
   {
     "place": "bcpen",
     "src": "images/places/bcpen-07.jpg",
     "thumb": "images/places/thumbs/bcpen-07.jpg",
-    "caption": "Banded sand snake (Chilomeniscus)",
+    "caption": "Variable sand snake (Chilomeniscus stramineus)",
     "credit": "Jacob Loyacano"
   },
   {
     "place": "bcpen",
     "src": "images/places/bcpen-08.jpg",
     "thumb": "images/places/thumbs/bcpen-08.jpg",
-    "caption": "Patch-nosed snake (Salvadora)",
+    "caption": "Western patch-nosed snake (Salvadora hexalepis)",
     "credit": ""
   },
   {
