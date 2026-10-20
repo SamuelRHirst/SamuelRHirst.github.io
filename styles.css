@@ -904,3 +904,15 @@ a   { color: inherit; }
 .fm-area.active { background: rgba(255 255 255 / 0.14); color: #fff; font-weight: 600; }
 .fm-nd { color: rgba(255 255 255 / 0.6); }
 .fm-chip[hidden] { display: none; }
+
+/* ── Map chips by state + gallery filters ─────────────── */
+.fm-chips { flex-direction: column; gap: 10px; }
+.fm-chips[hidden] { display: none; }
+.fm-chip-group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.fm-chip-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255 255 255 / 0.45); font-weight: 700; margin-right: 4px; min-width: 150px; }
+.fm-chip-state { border-style: dashed; }
+.gallery-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 18px; }
+.gallery { grid-auto-flow: dense; }
+@media (max-width: 768px) { .fm-chip-label { min-width: 0; width: 100%; } }
+
+.leaflet-interactive:focus { outline: none; }
