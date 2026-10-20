@@ -28,14 +28,31 @@
     adamanteus: ['Crotalus adamanteus', 'Eastern diamondback rattlesnake']
   };
 
+  // Species-level venom function (Hirst et al. 2026, Toxicon). Island samples were too small for
+  // island-level claims, so these describe each species across all of its island and mainland samples.
+  const VENOM = {
+    mitchellii: { name: 'Crotalus mitchellii', tag: 'Neurotoxic',
+      text: 'The most lethal venom in the system, rich in phospholipase A2 with almost no protein-digesting activity, a classic neurotoxic (Type II) profile. It also took the most antivenom to neutralize per milligram of venom.' },
+    pyrrhus: { name: 'Crotalus pyrrhus', tag: 'Proteolytic',
+      text: 'A metalloproteinase-rich venom with strong protein-digesting activity. It was the most variable of the four, with complexity, lethality, and antivenom requirements all differing widely among individuals and islands.' },
+    ruber: { name: 'Crotalus ruber', tag: 'Proteolytic',
+      text: 'The most proteolytic and least lethal venom of the four, and the least complex, dominated by a few abundant toxins. Its bites would be expected to cause mainly local tissue damage.' },
+    enyo: { name: 'Crotalus enyo', tag: 'Balanced',
+      text: 'The most complex and uniform venom, with intermediate enzyme activity and lethality. It was also the venom most efficiently neutralized by the commercial antivenom.' }
+  };
+  const venomKey = sci =>
+    /mitchellii/.test(sci) ? 'mitchellii' : /enyo/.test(sci) ? 'enyo' : /ruber/.test(sci) ? 'ruber'
+    : /pyrrhus|angelensis|thalassoporus|polisi/.test(sci) ? 'pyrrhus' : null;
+
   // species: [scientific, common, status]  status: true = endemic, 'nd' = present but not detected by us
   const PLACES = [
     // ── Baja California ──
     { id: 'bcpen', kind: 'state', state: 'bc', name: 'Baja California', region: 'Peninsula',
       note: 'Mainland populations sampled across the northern half of the peninsula. Localities are withheld.',
-      species: [S.ruber, S.enyo, S.pyrrhus], papers: ['tox', 'farleigh', 'cruber'] },
+      species: [['Crotalus ruber ruber', 'Red diamond rattlesnake'], S.enyo, S.pyrrhus], papers: ['tox', 'farleigh', 'cruber'] },
     { id: 'muerto', kind: 'island', state: 'bc', zoom: 13, name: 'Isla El Muerto', region: 'Northern Gulf', lat: 30.088, lng: -114.541,
-      species: [S.pyrrhus], papers: ['ibt', 'tox'] },
+      note: 'Home to an island dwarf. The speckled rattlesnakes we sampled here measured about 53 to 61 cm in body length, roughly half the length of the giant speckled rattlesnakes on nearby Isla Ángel de la Guarda (115 to 119 cm).',
+      species: [['Crotalus pyrrhus muertensis', 'El Muerto Island speckled rattlesnake', true]], papers: ['ibt', 'tox'] },
     { id: 'angel', kind: 'island', state: 'bc', zoom: 9, name: 'Isla Ángel de la Guarda', region: 'Midriff islands', lat: 29.290, lng: -113.390,
       note: 'The largest island in the study, about 936 km². Its speckled rattlesnake, C. angelensis, is a striking case of island gigantism, growing much larger than its mainland relatives, likely driven by its unusually large prey, the island’s giant spiny chuckwallas.',
       species: [['Crotalus angelensis', 'Ángel de la Guarda Island speckled rattlesnake', true], [...S.ruber, 'nd']],
@@ -49,7 +66,8 @@
     // ── Baja California Sur ──
     { id: 'bcspen', kind: 'state', state: 'bcs', name: 'Baja California Sur', region: 'Peninsula',
       note: 'Mainland populations sampled across the southern half of the peninsula, including the mainland comparison for Cerralvo’s rattlesnakes. Localities are withheld.',
-      species: [S.ruber, S.enyo, S.mitchellii], papers: ['tox', 'farleigh', 'cruber', 'wnan'] },
+      species: [['Crotalus ruber ruber', 'Red diamond rattlesnake, from the state line south to around Loreto'],
+                ['Crotalus ruber lucasensis', 'San Lucan red diamond rattlesnake, south of Loreto'], S.enyo, S.mitchellii], papers: ['tox', 'farleigh', 'cruber', 'wnan'] },
     { id: 'danzante', kind: 'island', state: 'bcs', zoom: 12, name: 'Isla Danzante', region: 'Bahía de Loreto', lat: 25.788, lng: -111.251,
       species: [S.ruber], papers: ['ibt', 'tox'] },
     { id: 'sanjose', kind: 'island', state: 'bcs', zoom: 11, name: 'Isla San José', region: 'La Paz islands', lat: 24.970, lng: -110.630,
@@ -61,6 +79,7 @@
     { id: 'espiritu', kind: 'island', state: 'bcs', zoom: 11, name: 'Isla Espíritu Santo', region: 'La Paz islands', lat: 24.470, lng: -110.350,
       species: [S.mitchellii, S.enyo], papers: ['ibt', 'tox', 'herp'] },
     { id: 'cerralvo', kind: 'island', state: 'bcs', zoom: 10, name: 'Isla Cerralvo', region: 'La Paz islands', lat: 24.255, lng: -109.888,
+      note: 'Cerralvo’s rattlesnake, C. enyo cerralvensis, has a smaller head for its body length than mainland C. enyo, which likely limits the size of prey it can take. Mainland snakes change their venom as they grow, but island snakes express a single venom at every size, suggesting that head shape and venom evolve together as one feeding phenotype.',
       species: [S.mitchellii, ['Crotalus enyo cerralvensis', 'Cerralvo Island rattlesnake', true]], papers: ['ibt', 'tox', 'wnan'] },
     // ── Florida (one general region; no island markers) ──
     { id: 'florida', kind: 'state', state: 'fl', name: 'Florida', region: 'Eastern diamondbacks on Gulf Coast islands',
@@ -85,6 +104,16 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const touch = window.matchMedia('(pointer: coarse)').matches;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const venomDetails = sci => {
+    const v = VENOM[venomKey(sci)];
+    if (!v) return '';
+    const sl = /angelensis|thalassoporus|polisi/.test(sci) ? ' This island endemic was studied as part of C. pyrrhus (sensu lato).' : '';
+    return `<details class="fm-venom"><summary>Venom: ${esc(v.tag)}</summary><p>${esc(v.text + sl)}</p></details>`;
+  };
+
+  const cards = document.getElementById('venom-cards');
+  if (cards) cards.innerHTML = Object.values(VENOM).map(v =>
+    `<article class="venom-card"><span class="venom-tag">${esc(v.tag)}</span><h4><em>${esc(v.name)}</em></h4><p>${esc(v.text)}</p></article>`).join('');
 
   const map = L.map(el, { scrollWheelZoom: false, dragging: !touch, tap: false });
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -201,7 +230,7 @@
     const ph = photosOf(id);
     const sp = p.species.map(([sci, common, status]) => status === 'nd'
       ? `<li class="fm-nd"><em>${esc(sci)}</em> ?<span>${esc(common)}, known from the island but not detected in our surveys</span></li>`
-      : `<li><em>${esc(sci)}</em><span>${esc(common)}${status ? ' <b class="fm-endemic">endemic</b>' : ''}</span></li>`).join('');
+      : `<li><em>${esc(sci)}</em><span>${esc(common)}${status ? ' <b class="fm-endemic">endemic</b>' : ''}</span>${venomDetails(sci)}</li>`).join('');
     const list = keys => keys.map(k => PAPERS[k]).map(x =>
       `<li><a href="${esc(x.url)}" target="_blank" rel="noreferrer">${esc(x.title)}</a><span>${esc(x.cite)}</span></li>`).join('');
     const papers = p.papers.filter(k => !PAPERS[k].note), notes = p.papers.filter(k => PAPERS[k].note);

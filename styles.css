@@ -916,3 +916,30 @@ a   { color: inherit; }
 @media (max-width: 768px) { .fm-chip-label { min-width: 0; width: 100%; } }
 
 .leaflet-interactive:focus { outline: none; }
+
+/* ── Venom by species ─────────────────────────────────── */
+.venom-wrap { margin: 0 0 56px; }
+.venom-title { font-family: "Playfair Display", serif; font-size: 1.6rem; color: #fff; margin-bottom: 8px; }
+.venom-desc { color: rgba(255 255 255 / 0.6); max-width: 760px; margin-bottom: 20px; }
+.venom-desc a { color: var(--orange); text-decoration: none; white-space: nowrap; }
+.venom-desc a:hover { text-decoration: underline; }
+.venom-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.venom-card {
+  background: var(--dark2); border: 1px solid var(--line-dark); border-radius: 12px;
+  padding: 18px 18px 16px; color: rgba(255 255 255 / 0.75); font-size: 0.88rem; line-height: 1.55;
+}
+.venom-card h4 { color: #fff; font-size: 1rem; margin: 8px 0 6px; font-weight: 600; }
+.venom-tag {
+  display: inline-block; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;
+  padding: 2px 8px; border-radius: 4px; background: rgba(237 139 34 / 0.18); color: var(--orange);
+}
+.fm-venom { margin-top: 4px; }
+.fm-venom summary {
+  cursor: pointer; font-size: 0.75rem; color: var(--orange); list-style: none; display: inline-block;
+}
+.fm-venom summary::-webkit-details-marker { display: none; }
+.fm-venom summary::before { content: "▸ "; }
+.fm-venom[open] summary::before { content: "▾ "; }
+.fm-venom p { font-size: 0.8rem; color: rgba(255 255 255 / 0.7); margin-top: 4px; line-height: 1.5; }
+@media (max-width: 900px) { .venom-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .venom-cards { grid-template-columns: 1fr; } }
